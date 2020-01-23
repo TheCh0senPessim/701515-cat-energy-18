@@ -13,13 +13,13 @@
         <button class="main-nav__toggle" type="button">Открыть меню</button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
+            <li class="site-list__item">
               <a href="index.html">Главная</a>
             </li>
             <li class="site-list__item">
               <a href="catalog.html">Каталог продукции</a>
             </li>
-            <li class="site-list__item">
+            <li class="site-list__item site-list__item--active">
               <a>Подбор программы</a>
             </li>
           </ul>
@@ -29,9 +29,62 @@
 
     <main class="page-main">
       <h1>Подбор программы</h1>
+      <p>Заполните анкету и мы подберем <br>
+        программу питания для вашего кота</p>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <fieldset>
+            <label for="name">Имя:*</label>
+            <input type="text" id="name" name="cat-name" placeholder="Барсик" required>
+            <label for="weight">Вес (кг):*</label>
+            <input type="number" id="weight" name="weight" placeholder="7" required>
+            <label for="age">Возраст (лет):</label>
+            <input type="number" id="age" name="age" placeholder="7">
+          </fieldset>
+          <fieldset>
+            <input type="radio" id="loss" name="goal" value="losing-weight" checked>
+            <label for="loss">Похудение</label>
+            <input type="radio" id="gain" name="goal" value="weight-gain">
+            <label for="gain">Набор массы</label>
+            <input type="radio" id="advice" name="goal" value="need-advice">
+            <label for="advice">Не знаю (Нужен ваш совет)</label>
+          </fieldset>
+          <fieldset>
+            <legend>Контактные данные (владельца кота)</legend>
+            <label for="mail">E-mail:*</label>
+            <input type="email" id="mail" name="mail" autocomplete="on" placeholder="kuklachev@gmail.com" required></input>
+            <label for="tel">Телефон:*</label>
+            <input type="tel" id="tel" name="tel" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="8 (960) 900-60-90" required>
+            <!-- добавить паттерн -->
+          </fieldset>
+          <fieldset>
+            <legend>Комментарий</legend>
+            <textarea rows="5" name="comment">Расскажите обо всех повадках кота</textarea>
+          </fieldset>
+          <fieldset>
+            <legend>Дополнительно</legend>
+            <input type="checkbox" id="sweetener" name="extra" value="sweetener" checked>
+            <label for="sweetener">Сахарозаменитель</label>
+            <input type="checkbox" id="water" name="extra" value="water">
+            <label for="water">Питьевая вода</label>
+            <input type="checkbox" id="milk" name="extra" value="milk">
+            <label for="milk">Молоко</label>
+            <input type="checkbox" id="vitamins" name="extra" value="vitamins">
+            <label for="vitamins">Витамины</label>
+          </fieldset>
+          <div class="form-submit">
+            <input type="submit" value="Отправить заявку">
+          </div>
+          <span>* — Обязательные поля</span>
+        </form>
     </main>
 
     <footer class="page-footer">
+      <div class="contacts">
+        <b class="contacts__appeal">приглашаем к сотрудничеству дилеров!</b>
+        <p class="contacts__description">ул. Большая <br>
+          Конюшенная, д. 19/8 <br>
+          Санкт-Петербург</p>
+      </div>
       <div class="page-footer__map"></div>
       <a class="page-footer__logo">
         <img class="page-footer__logo-image" src="" width="" height="" alt="">
